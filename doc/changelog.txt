@@ -1,0 +1,18 @@
+
+version 0.98 (released 2010-05-15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Changelog added
+ * Homozygousity output
+ * merge functionality added
+ * centimorgans map may contain commas as delimiter
+ * updated centimorgans map
+ * refactoring and code cleaning
+ * screenshots added
+
+version 0.99, fix (released 2010-05-16)
+ * Percentage sign printing in homozygousity output
+ * Unit (regression) tests added
+ * Documentation updated
+ * centimorgans map updated (new snips), also based on new map (with header)
+ * Bug in merge fixed
+

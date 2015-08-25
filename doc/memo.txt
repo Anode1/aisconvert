@@ -1,0 +1,30 @@
+##########################################################
+
+	This is memo: some useful links etc
+
+##########################################################
+
+#The project itself on SourceForge
+http://sourceforge.net/projects/aisconvert/
+
+#links to screenshots:
+#linux
+http://sourceforge.net/dbimage.php?id=263318
+#windows:
+http://sourceforge.net/dbimage.php?id=263316
+
+#HIR search (search which uses the utility on the backend):
+http://hirs.snpology.com/
+
+
+#history (how the development had started):
+http://forum.molgen.org/index.php/topic,934.60.html
+
+#HapMap:
+http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/00README.txt <== format
+http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/?N=D <== data
+
+
+
+
+

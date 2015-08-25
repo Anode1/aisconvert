@@ -1,0 +1,58 @@
+****************************************************************
+
+ This file contains instructions - how to develop/contribute
+
+****************************************************************
+
+
+Option 1 - the easiest, but does not include contributing (so is intended
+for quick fixes only). Contributions/patches also may be sent to another
+developer who has write access to CVS - for commiting.
+----------------------------------------------------------------
+
+1 download aisconvert-<version>-src.zip or aisconvert-<version>-src.tar.gz
+2 unzip/untar sources
+3 under windows:
+	double-click on build.bat
+		or
+	C:\>cd ais 
+	C:\aisconvert> build
+		or 
+	C:\aisconvert> ant
+4 open an editor, change the code, goto 3
+5 diff (and please consider sending patch). If modifying few files - do "diff" 
+  against 2 directories: original distribution been unpacked and the modified one
+  
+
+option 2 - eclipse
+----------------------------------------------------------------
+
+File -> Import -> Projects From CVS -> 
+type aisconvert.cvs.sourceforge.net, /cvsroot/aisconvert, developername, password
+Next-Next (defaults)
+
+while(true){ <edit code> update; commit }
+
+
+option 3
+----------------------------------------------------------------
+command-line cvs + any editor
+
+one-time:
+	%cvs -d:ext:developername@aisconvert.cvs.sourceforge.net:/cvsroot/aisconvert co -P aisconvert
+	<enter password> 
+	%cd aisconvert
+	%ant
+
+in future (having CVS metafiles):
+	%cd aisconvert
+	%cvs update
+	<edit code;>
+	%cvs update
+	%cvs commit
+
+etc
+
+For SVN repository:
+	svn co https://aisconvert.svn.sourceforge.net/svnroot/aisconvert aisconvert
+	etc

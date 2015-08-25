@@ -1,0 +1,66 @@
+$ sh aisconvert -u -i data/6.txt data/7.txt
+Processing 6.txt vs 7.txt
+7 13 12345671 12345683
+7 8 12345678 12345685
+7 2 12345685 12345685
+7 7 12345688 12345693
+The biggest HIR:
+7 13 12345671 12345683
+Processed in 64 ms.
+$ sh aisconvert -h
+
+ aisconvert - Genome Processing Tool 0.2
+ Copyright (C) 2009 Vasili Gavrilov
+ This program comes with ABSOLUTELY NO WARRANTY;
+ This is free software, and you are welcome to redistribute it
+ under certain conditions; see <http://www.gnu.org/licenses/>.
+
+Usage:
+     aisconvert --input 1.txt
+                     Process on file
+     aisconvert -i 1.txt
+                     The same as previous but shorter
+     aisconvert 1.txt
+                     The shortest way to pass file
+     aisconvert "Some Directory"
+                     All files in passed directory will be processed
+     aisconvert -i /home/vasya/file1.txt -i /home/pasha/file2.txt -i All
+                     Passing list of files (mixing files and directories allowed
+)
+     aisconvert -i 1.txt --snips data/snips.txt
+                     Passing required snips (If snips are not passed - there
+                     will be a warning and default snips file will be used
+     aisconvert -u -i 1.txt -i 2.txt
+                     HIR calculator: compare 2 files
+     aisconvert -u -i /home/data
+                     HIR calculator: compare every file with every file in a dir
+ectory
+     aisconvert -u -i /home/data -m 500 -cM 5
+                     HIR calculator: passing thresholds: max snips number and sa
+ntimorgans
+
+Options:
+
+ -h, --help          This help screen
+ -f, --file          Pass file (absolute or relative path)
+ -d, --dir           Pass directory (All the files on 1st level will be processe
+d)
+ -s, --snips         Pass list of snips required in the output in the order
+ -o, --output        Pass output file path (for now - for RAW2PED mode only)
+     --hapmap        Use HapMap file(s) as input(s) (not implemented completely)
+ -u  --hir              HIR Calculator mode
+      Options working with HIR Calculator only:
+           -cM       Centimorgans threshold
+           -m        Minimal number of snips threshold
+
+$
+
+$ sh aisconvert -u -i data/6.txt data/7.txt
+Processing 6.txt vs 7.txt
+7 13 12345671 12345683 1063.983
+7 8 12345678 12345685 773.45685
+7 2 12345685 12345685 193.4443
+7 7 12345688 12345693 479.23163
+The biggest HIR in chromosome 7:
+7 13 12345671 12345683
+Processed in 1750 ms.

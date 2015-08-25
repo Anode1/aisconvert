@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# the following 2 lines - only for development (not to regenerate jar)
+CP=.
+CP=${CP}:./classes
+CP=${CP}:./aisconvert.jar
+
+if [ "$OSTYPE" = "cygwin32" ] || [ "$OSTYPE" = "cygwin" ] || [ "$OS" = "Windows_NT" ] ; then
+  CP=`cygpath --path --windows "${CP}"`
+fi
+
+#Set JVM parameters here - such as -Xmx1024 etc 
+java -Xms512m -Xmx1024m -classpath "${CP}:${CLASSPATH}" org.ais.convert.gui.MainFrame "$@"

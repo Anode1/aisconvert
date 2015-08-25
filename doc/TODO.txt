@@ -1,0 +1,17 @@
+
+TODO list
+~~~~~~~~~~
+
+
+* PrintWriter instead of System.out - to be able to redirect the output 
+  for analysis (in unit tests, for example). log4j as an option?
+
+* FTDNA native format (CSV, fasta) convertor
+
+* GenBank convertor
+
+* HapMap convertor
+
+* order, cleaning
+
+* raw2ped convertor (a doc/help, maybe some more reasonable defaults)
